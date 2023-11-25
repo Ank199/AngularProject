@@ -1,0 +1,26 @@
+/* update-book.component.css */
+#body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(180deg,rgb(14, 14, 74),rgb(175, 175, 248));
+  }
+  
+  .container {
+    width: 400px;
+  }
+  
+ 
+  
+ 
+  
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  button {
+    align-self: flex-end;
+  }
+  

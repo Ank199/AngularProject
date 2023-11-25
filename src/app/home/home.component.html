@@ -1,0 +1,238 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<!-- Title -->
+<section id="title">
+ 
+  <div class="container col-xxl-8 px-4 pt-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 pt-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img [src]="'../assets/main.jpg'" class="d-block mx-lg-auto img-fluid" alt="Library Books" height="200">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Explore the World of Books.</h1>
+
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <button type="button" class="btn btn-light btn-lg px-4 me-md-2 mb-3" fdprocessedid="rh26nr"><img
+              src="./icons8-apple-logo-30.png" alt=""> Download</button>
+          <button type="button" class="btn btn-outline-light btn-lg px-4 mb-3" fdprocessedid="vzbgey"><img
+              src="./icons8-google-play-24.png" alt=""> Audio Books</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features -->
+<section id="features" class=" bg-gradient">
+  <div class="container px-4 py-5" id="hanging-icons">
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+      <div class="col d-flex align-items-start">
+        <div
+          class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+          <!-- Replace the checkmark icon with a book icon -->
+          <i class="bi bi-book"></i>
+        </div>
+        <div>
+          <h3 class="fs-2 text-body-emphasis">Vast Collection of Books.</h3>
+          <p>Explore a diverse range of books catering to every taste and interest.</p>
+        </div>
+      </div>
+      <div>
+        <h3 class="fs-2 text-body-emphasis ">BUY NOW. </h3>
+        <p>Get Books with No shipping charges and more discounts </p>
+      </div>
+    </div>
+
+
+
+
+
+  </div>
+
+
+</section>
+
+<!-- Cards -->
+
+<!-- Include similar blocks for other features -->
+<div class="container mt-3">
+  <div class="row">
+    <!-- Loop through your books array in the component and generate a card for each book -->
+    <div class="col-md-4" *ngFor="let book of books">
+      <div class="card">
+        <div class="card-body" id="card">
+          <h5 class="card-title">{{ book.name }}</h5>
+          <p class="card-text">Price: {{ book.price }}₹</p>
+          <button type="button" class="btn btn-outline-primary border-0" (click)="addCart(book)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+              <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z"></path>
+            </svg>
+            Add
+          </button>
+          
+        </div>
+      </div>
+    </div>
+    <!-- Testimonial -->
+    <section id="testimonial">
+      <div class="p-5 text-center bg-body-tertiary">
+        <div class="container py-5">
+          <h2 class="text-body-emphasis">
+            "Diving into the pages of these books is an enchanting journey. Every book is a new adventure."
+          </h2>
+          <!-- Replace the dog image with a reader or book-related image -->
+          <img id="photo" class="profile-img mt-5" [src]="'./assets/photo.jpg'" alt="Reader">
+          <p class="col-lg-8 mx-auto lead mt-3">
+            — Ankit, avid reader <code></code>
+          </p>
+        </div>
+
+        <!-- Include logos of literary reviews instead of tech-related logos -->
+        <div class="container">
+          <div class="row">
+            <!-- Include logos of literary reviews or book-related organizations -->
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing">
+      <div class="container py-3">
+        <header>
+          <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+            <h1 class="display-4 fw-normal text-body-emphasis">Membership Plans for Every Reader</h1>
+            <p class="fs-5 text-body-secondary">Choose a plan that suits your reading preferences.</p>
+          </div>
+        </header>
+
+        <main>
+          <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+            <!-- Update the plan details to reflect book-related features -->
+            <div class="col-4">
+              <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3">
+                  <h4 class="my-0 fw-normal">Classic Reader</h4>
+                </div>
+                <div class="card-body">
+                  <h1 class="card-title pricing-card-title">₹100<small
+                      class="text-body-secondary fw-light">/month</small>
+                  </h1>
+                  <ul class="list-unstyled mt-3 mb-4">
+                    <li>Access to 500 books</li>
+                    <li>Weekly recommendations</li>
+                    <li>Online reading</li>
+                  </ul>
+                  <button type="button" class="w-100 btn btn-lg btn-outline-dark">Sign up</button>
+                </div>
+              </div>
+            </div>
+            <!-- Include similar blocks for other membership plans -->
+            <div class="col-4">
+              <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3">
+                  <h4 class="my-0 fw-normal">Pro Reader (Silver card)</h4>
+                </div>
+                <div class="card-body">
+                  <h1 class="card-title pricing-card-title">₹500<small class="text-body-secondary fw-light">/6
+                      month</small>
+                  </h1>
+                  <ul class="list-unstyled mt-3 mb-4">
+                    <li>Access to 1000+ books</li>
+                    <li>Weekly recommendations</li>
+                    <li>Online reading</li>
+                    <li>Audio Books + (Stories and more)</li>
+                  </ul>
+                  <button type="button" class="w-100 btn btn-lg btn-outline-dark">Sign up</button>
+                </div>
+              </div>
+            </div>
+
+
+
+            <!-- another -->
+
+            <div class="col-4">
+              <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3">
+                  <h4 class="my-0 fw-normal">Pro Reader (Gold Card)</h4>
+                </div>
+                <div class="card-body">
+                  <h1 class="card-title pricing-card-title">₹1000<small class="text-body-secondary fw-light">/12
+                      month</small>
+                  </h1>
+                  <ul class="list-unstyled mt-3 mb-4">
+                    <li>Access to 1000+ books</li>
+                    <li>Weekly recommendations</li>
+                    <li>Online reading</li>
+                    <li> +Audio Books(Stories and more)</li>
+                    <li>+ Get Access of Paid All competative Books</li>
+                  </ul>
+                  <button type="button" class="w-100 btn btn-lg btn-outline-dark">Sign up</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </main>
+      </div>
+
+    </section>
+
+    <!-- Footer -->
+    <section id="footer" class="gradient-background ">
+      <div class="container-fluid">
+        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5">
+          <div class="col">
+            <h5>Library Information</h5>
+            <p>Visit us at:</p>
+            <address>
+              Your Library Name<br>
+              123 Library Street<br>
+              City, State, ZIP Code
+            </address>
+          </div>
+
+          <div class="col">
+            <h5>Contact Us</h5>
+            <p>
+              <!-- <p>Email: ankitlad1999@gmail.com<br> -->
+              Phone: (123) 456-7890
+            </p>
+          </div>
+
+          <div class="col">
+            <h5>Explore</h5>
+            <ul>
+              <li><a href="#">Catalog</a></li>
+              <li><a href="#">Events</a></li>
+              <li><a href="#">Membership</a></li>
+            </ul>
+          </div>
+
+          <div class="col">
+            <h5>Featured Books</h5>
+            <ul>
+              <li><a href="#">Online Book</a></li>
+              <li><a href="#">Audio podcast</a></li>
+              <li><a href="#">New Primium Edition</a></li>
+            </ul>
+          </div>
+
+          <div class="col">
+            <h5>Connect With Us</h5>
+            <ul class="list-inline">
+              <li class="list-inline-item"><a href="#"><i class="fab fa-facebook">facebook</i></a></li>
+              <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i>twitter</a></li>
+              <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i>instagram</a></li>
+            </ul>
+          </div>
+        </footer>
+      </div>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"></script>

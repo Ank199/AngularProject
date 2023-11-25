@@ -1,0 +1,55 @@
+#photo{
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+}
+
+#title{
+    background: linear-gradient(135deg,rgb(175, 175, 248),blue);
+}
+#footer{
+    background: linear-gradient(135deg,blue,rgb(175, 175, 248));
+    color: aliceblue;
+   
+   
+}
+a{
+    text-decoration: none;
+    color: rgb(255, 255, 0);
+    font-weight: 700;
+}
+/* #card{
+    background-color: rgb(231, 243, 11);
+    padding: 30px;
+    width: 100px;
+    margin: 20px;
+    box-sizing: border-box;
+} */
+
+
+
+ /* Style for the book cards */
+ .card {
+    border: 1px solid #ddd; /* Add a border for better visibility */
+    border-radius: 8px; /* Rounded corners for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    transition: transform 0.3s ease-in-out; /* Smooth transition on hover */
+    margin-bottom: 20px; /* Increase space between cards */
+  }
+
+  .card:hover {
+    transform: scale(1.05); /* Enlarge the card on hover */
+  }
+
+  .card-body {
+    padding: 15px; /* Increase padding for better readability */
+  }
+
+  .card-title {
+    font-size: 1.2rem; /* Increase font size for the title */
+    margin-bottom: 8px; /* Add space between title and price */
+  }
+
+  .card-text {
+    color: #555; /* Set a slightly darker color for the text */
+  }

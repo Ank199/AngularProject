@@ -1,0 +1,22 @@
+<p>form works!</p>
+<form #userForm="ngForm" (ngSubmit)="getForm(userForm.value)">
+    <label for="name">Enter your name </label>
+    <input type="text" ngModel name="name" id="name">
+    <br>
+    <label for="email">Enter your Email </label>
+    <input type="email" ngModel name="email" id="email">
+    <br>
+    <input type="submit">
+</form>
+
+<hr width="100%" height="20%">
+<h1>Reactive form/h1>
+    <form (ngSubmit)="getForm(userForm.value)">
+        <label for="name">Enter your name </label>
+        <input type="text" name="name">
+        <br>
+        <label for="email">Enter your Email </label>
+        <input type="email" name="email">
+        <br>
+        <input type="submit">
+    </form>

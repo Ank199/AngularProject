@@ -1,0 +1,39 @@
+<div>
+    <h3 style="text-align: center; background-color: rgb(33, 33, 88); color: white; padding: 5px;">Shopping cart</h3>
+  </div>
+<table>
+    <thead>
+        <tr>
+            <th>Books</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cart of cartList">
+            <td>{{ cart.name }}</td>
+            <td>{{ cart.price }} ₹</td>
+            <td (click)="delete(cart.id)"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 13H7v-2h10v2z"
+                        fill="#E53935" />
+                </svg>
+
+            </td>
+
+        </tr>
+
+    </tbody>
+</table>
+
+
+
+<div id="total">
+    <h5>Total : {{ calculateTotal() }} ₹</h5>
+ <img routerLink="/Buy" src="https://cdn-icons-png.flaticon.com/128/825/825575.png" data-src="https://cdn-icons-png.flaticon.com/128/825/825575.png" alt="Buy " title="Buy " width="70" height="70" class="lzy lazyload--done" srcset="https://cdn-icons-png.flaticon.com/128/825/825575.png 4x">
+</div>
+
+
+
+<router-outlet></router-outlet>

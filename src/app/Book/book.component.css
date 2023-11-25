@@ -1,0 +1,75 @@
+/* Apply styles to the body */
+#body {
+   font-family: Arial, sans-serif;
+   background: linear-gradient(180deg,rgb(14, 14, 74),rgb(175, 175, 248));
+   height: 100vh;
+   box-sizing: border-box;
+ 
+ }
+ 
+ /* Style the header */
+ h2 {
+   text-align: center;
+   color: #ffffff;
+ padding: 22px;
+ }
+ 
+ /* Add some space between the header and the table */
+ hr {
+   width: 100%;
+   
+ }
+ 
+
+ .table {
+   width: 80%;
+   margin: 20px auto;
+
+   border-collapse: collapse;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+
+ }
+ 
+
+ thead {
+   background-color: #f8f9fa; /* Bootstrap background color */
+ }
+ 
+ th, td {
+   padding: 15px;
+   text-align: center;
+ }
+ 
+ /* Add some padding to the table body rows */
+ tbody {
+   background-color: #ffffff; /* Bootstrap background color */
+ }
+ 
+ /* Style the action buttons */
+ .btn {
+   margin-right: 5px;
+ }
+ 
+ .btn-success {
+   background-color: #28a745; /* Bootstrap success button color */
+   border: none;
+ }
+ 
+ .btn-primary {
+   background-color: #007bff; /* Bootstrap primary button color */
+   border: none;
+ }
+ 
+ /* Style the link within the button */
+ .btn a {
+   color: white;
+   text-decoration: none;
+ }
+ 
+ /* Add some margin and padding to the router outlet */
+ router-outlet {
+   margin-top: 20px;
+   padding: 20px;
+ }
+ 

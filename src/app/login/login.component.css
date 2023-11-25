@@ -1,0 +1,46 @@
+body {
+    background-color: #f8f9fa;
+}
+
+form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+h2 {
+    margin-bottom: 2px;
+    text-align: center;
+    
+  
+}
+
+label {
+    font-weight: bold;
+}
+
+.form-control {
+    margin-bottom: 15px;
+}
+
+.btn-primary {
+    width: 100%;
+}
+
+.form-check-input {
+    margin-top: 5px;
+}
+
+.form-check-label {
+    margin-left: 5px;
+}
+
+#body{
+    background: linear-gradient(135deg,white,blue);
+  
+    height: 100dvh;
+    width:100%;
+}

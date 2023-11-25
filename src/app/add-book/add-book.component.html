@@ -1,0 +1,24 @@
+<div id="body">
+  <h2 style="text-align:center;">Add Book</h2>
+<div class="container mt-3">
+  <form [formGroup]="bookForm" (ngSubmit)="AddBook()">
+    <!-- <mat-form-field class="full-width">
+      <mat-label>ID:</mat-label>
+      <input matInput formControlName="id" >
+    </mat-form-field> -->
+
+    <mat-form-field class="full-width">
+      <mat-label>Title:</mat-label>
+      <input matInput formControlName="name" required>
+    </mat-form-field>
+<br>
+    <mat-form-field class="full-width">
+      <mat-label>Price:</mat-label>
+      <input matInput formControlName="price" required>
+    </mat-form-field>
+<br>
+    <button type="submit" mat-raised-button color="primary">add Book</button>
+  </form>
+</div>
+
+</div>
