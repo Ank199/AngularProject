@@ -6,27 +6,33 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-add-book',
   templateUrl: './add-book.component.html',
-  styleUrls: ['./add-book.component.css']
+  styleUrls: ['./add-book.component.css'],
 })
 export class AddBookComponent implements OnInit {
   bookForm!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private service: BookServiceService, private router: Router) {}
+  constructor(
+    private formBuilder: FormBuilder,
+    private service: BookServiceService,
+    private router: Router
+  ) {}
 
   ngOnInit() {
     this.bookForm = this.formBuilder.group({
-      'name': [null, Validators.required],
-      'price': [null, [Validators.required, Validators.pattern(/^\d+(\.\d{1,2})?$/)]]
+      name: [null, Validators.required],
+      price: [
+        null,
+        [Validators.required, Validators.pattern(/^\d+(\.\d{1,2})?$/)],
+      ],
     });
   }
 
   AddBook() {
     if (this.bookForm.valid) {
-      this.service.addData(this.bookForm.value).subscribe(info => {
+      this.service.addData(this.bookForm.value).subscribe((info) => {
         console.log(info);
-     
       });
-      this.router.navigate(['/List'], { queryParams: { refresh: 'true' } });
+      this.router.navigate(['/List']);
     }
   }
 }
